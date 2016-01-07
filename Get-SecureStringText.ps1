@@ -13,6 +13,7 @@ function Get-SecureStringText
     {
         foreach ($ss in $SecureString)
         {
+            $ptr = $null
             try
             {
                 $ptr = [System.Runtime.InteropServices.Marshal]::SecureStringToGlobalAllocUnicode($ss)
